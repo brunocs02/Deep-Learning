@@ -1,0 +1,50 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "module_deepL"
+version = "0.0.1"
+description = "Deep Learning project using TensorFlow"
+authors = [
+  { name = "Bruno" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+dependencies = [
+    "ipython",
+    "jupyterlab",
+    "loguru",
+    "matplotlib",
+    "mkdocs",
+    "notebook",
+    "numpy",
+    "pandas",
+    "pip",
+    "pytest",
+    "python-dotenv",
+    "ruff",
+    "scikit-learn",
+    "tensorflow>=2.22.0rc0",
+    "tqdm",
+    "typer",
+]
+requires-python = "==3.14.7"
+
+
+[tool.ruff]
+line-length = 99
+src = ["module_deepL"]
+include = ["pyproject.toml", "module_deepL/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["module_deepL"]
+force-sort-within-sections = true
+
